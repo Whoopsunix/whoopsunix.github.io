@@ -2,5 +2,5 @@
 
 # Whoopsunix's WIKI
 
-[Get Started](#About)
+[Get Started](#WIKI)
 
