@@ -1,0 +1,67 @@
+<rss version="2.0" content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>whoopsunix</title>
+    <link>https://whoopsunix.com</link>
+    <description>whoopsunix</description>
+    <item>
+      <title>Java 基础</title>
+      <link>https://whoopsunix.com/#/docs/java/basic/baseArt.md</link>
+      <description>Java 基础</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>fastjson all in one</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/fastjson/README.md</link>
+      <description>fastjson all in one</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>全版本漏洞复现</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/fastjson/recurring.md</link>
+      <description>全版本漏洞复现</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>json框架区分、dns探测、版本探测、利用链探测</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/fastjson/fastjsonCheck/fastjsonCheck.md</link>
+      <description>json框架区分、dns探测、版本探测、利用链探测</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>fastjson bypass</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/fastjson/bypass/bypass.md</link>
+      <description>fastjson bypass</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>CVE-2022-44262 ff4j framework 远程代码执行漏洞</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/ff4j/CVE-2022-44262Art.md</link>
+      <description>CVE-2022-44262 ff4j framework 远程代码执行漏洞</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>CVE-2022-26134 Confluence OGNL RCE 复现分析</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/Confluence/CVE-2022-26134/CVE-2022-26134.md</link>
+      <description>CVE-2022-26134 Confluence OGNL RCE 复现分析</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>CVE-2021-27850 Apache Tapestry 反序列化分析</title>
+      <link>https://whoopsunix.com/#/docs/components/cves/Apache/Tapestry/CVE-2022-46366/CVE-2022-46366Art.md</link>
+      <description>CVE-2021-27850 Apache Tapestry 反序列化分析</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>CVE-2022-45047 Apache MINA 代码问题</title>
+      <link>https://whoopsunix.com/#/docs/components/sinks/Apache/MINA/CVE-2022-45047Art.md</link>
+      <description>CVE-2022-45047 Apache MINA 代码问题</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+    <item>
+      <title>vcenter 后渗透利用</title>
+      <link>https://whoopsunix.com/#/docs/RT/vcenter/vcenterArt.md</link>
+      <description>vcenter 后渗透利用</description>
+      <pubDate>2023-12-01</pubDate>
+    </item>
+  </channel>
+</rss>
