@@ -2,7 +2,7 @@
 
 By. Whoopsunix
 
-推荐阅读 [javaweb-sec](https://github.com/javaweb-sec/javaweb-sec) 项目，写的很全
+基础知识推荐阅读 [javaweb-sec](https://github.com/javaweb-sec/javaweb-sec) 项目，写的很全
 
 # 0x01 ClassLoader
 
@@ -222,3 +222,6 @@ public void testDynamicProxy(){
 
 ![image-20230308100429582](attachments/image-20230308100429582.png)
 
+# 0x04 反编译
+
+https://github.com/fesh0r/fernflower
