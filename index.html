@@ -9,7 +9,6 @@
     <link rel="icon" href="plugins/img/favicon.ico"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-darklight-theme/dist/style.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
     <style type="text/css">
         a.github-corner svg {
             max-width: 80px;
@@ -86,6 +85,15 @@
             right: 15,
             bottom: 15,
             offset: 500
+        },
+        gitalk: {
+            clientID: '75fac77c10a7b307d48e',
+            clientSecret: 'c594397af2d87662452173d107924f05667b3125',
+            repo: 'whoopsunix.github.io',
+            owner: 'Whoopsunix',
+            admin: ['Whoopsunix'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false,
         }
     };
 </script>
@@ -118,25 +126,27 @@
 <!--进度条-->
 <script src="https://cdn.jsdelivr.net/npm/docsify-progress@1.0.3/dist/progress.min.js"></script>
 <!--gitalk-->
-<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script src="https://unpkg.com/docsify-gitalk@1.0.0/dist/docsify-gitalk.min.js"></script>
 <!-- PWA -->
 <script>
     if (typeof navigator.serviceWorker !== 'undefined') {
         navigator.serviceWorker.register('sw.js')
     }
 </script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: '75fac77c10a7b307d48e',
-        clientSecret: 'c594397af2d87662452173d107924f05667b3125',
-        repo: 'whoopsunix.github.io',
-        owner: 'Whoopsunix',
-        admin: ['Whoopsunix'],
-        // facebook-like distraction free mode
-        distractionFreeMode: false
-    });
-    gitalk.render('gitalk-container')
-</script>
+<!--<script>-->
+<!--    const gitalk = new Gitalk({-->
+<!--        clientID: '75fac77c10a7b307d48e',-->
+<!--        clientSecret: 'c594397af2d87662452173d107924f05667b3125',-->
+<!--        repo: 'whoopsunix.github.io',-->
+<!--        owner: 'Whoopsunix',-->
+<!--        admin: ['Whoopsunix'],-->
+<!--        // facebook-like distraction free mode-->
+<!--        distractionFreeMode: false,-->
+<!--    });-->
+<!--    gitalk.render('gitalk-container')-->
+<!--</script>-->
 </body>
 </html>
