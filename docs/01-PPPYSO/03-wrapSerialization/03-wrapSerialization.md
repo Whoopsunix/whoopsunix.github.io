@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-tags: [serialization, PPPYSO, WrapSerialization]
+tags: [Deserialization, PPPYSO, WrapSerialization]
 #slug: About Me
 #title: About Me
 ---
