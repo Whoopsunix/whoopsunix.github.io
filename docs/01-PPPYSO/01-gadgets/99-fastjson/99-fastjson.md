@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-tags: [ysoserial, PPPYSO, fastjson]
+tags: [ysoserial, PPPYSO, Fastjson]
 #slug: About Me
 #title: About Me
 ---

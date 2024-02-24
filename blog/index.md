@@ -2,7 +2,7 @@
 #slug: About Me
 #title: About Me
 authors: [Whoopsunix]
-tags: [java]
+tags: [Java]
 ---
 
 # About Me

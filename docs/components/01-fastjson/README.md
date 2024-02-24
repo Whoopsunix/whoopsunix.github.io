@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
-tags: [CVE, fastjson]
+tags: [CVE, Fastjson, Deserialization]
 ---
 
 # fastjson
-
+w1-ff
 ## Why fastjson？
 
 fastjson复现简单、调用链多，很多时候反而更像是在看其他组件的序列化链，很适合拿来做java研究

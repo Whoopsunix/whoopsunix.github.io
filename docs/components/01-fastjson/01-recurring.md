@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-tags: [fastjson]
+tags: [Fastjson]
 #slug: About Me
 #title: About Me
 ---
@@ -462,7 +462,7 @@ cmd: whoami
 }
 ```
 
-## Fastjson 1.2.36 - 1.2.62 远程拒绝服务
+## fastjson 1.2.36 - 1.2.62 远程拒绝服务
 
 1.2.62_noneautotype、1.2.60.sec09_noneautotype、1.2.60_noneautotype 同样存在漏洞
 
