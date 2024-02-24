@@ -1,4 +1,4 @@
-# Dubbo Bypass deserialization checks
+# Dubbo Bypass deserialization checks <= 2.7.23
 
 ## version test
 
