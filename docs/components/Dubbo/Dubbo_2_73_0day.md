@@ -2,7 +2,7 @@
 
 ## version test
 
-在复现 Dubbo 历史漏洞时，发现 CVE-2020-11995 即对 CVE-2020-1948 的修复不完全，`$echo` 仍然存在利用方式，后续版本 Hessian 黑名单将该问题隐藏了，但是仍存在 <=2.7.23 的原生反序列化利用。
+在复现 Dubbo 历史漏洞时，发现 CVE-2020-11995 即对 CVE-2020-1948 的修复不完全，`$echo` 仍然存在利用方式，后续版本 Hessian 黑名单将该问题隐藏了，但是仍存在 <=2.7.23 的原生反序列化利用。这个问题上报给 Dubbo 后得到的答复是 2.x 版本已[停止维护](https://github.com/apache/dubbo/security)，所以将该利用公开。
 
 ![dubbo](attachments/dubbo.gif)
 
@@ -31,7 +31,7 @@ oos.flushBuffer();
 
 ## pwned <=2.7.23
 
-但是可以用未经安全验证的 Java 反序列化的方式来实现绕过利用，这个问题在 3.x 以上版本被修复。
+但是仍然可以用未经安全验证的 Java 反序列化的方式来实现绕过利用，这个问题在 3.x 以上版本被修复。
 
 ```java
 public static void main(String[] args) throws Exception {
