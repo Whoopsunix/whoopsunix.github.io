@@ -19,6 +19,16 @@
 - CVE-2022-39198
 - CVE-2023-23638
 
+## Dubbo 代码用例
+
+该文的漏洞都是在官方给的 Demo 基础上复现 github 安全中心报告的问题，漏洞配套代码都上传至 [PPPVULNS](https://github.com/Whoopsunix/PPPVULNS/tree/master/components/Apache/DubboDemo) ，使用时注意切换 consumer、provider 的版本。
+
+官方 Demo：
+
+https://github.com/apache/dubbo-samples
+
+https://github.com/apache/dubbo-spring-boot-project/releases
+
 # 0x02 环境搭建
 
 ## zookeeper
@@ -43,16 +53,6 @@ dataLogDir=/env/apache-zookeeper-3.8.1-bin/logs
 ```
 
 3. bin 下 zkServer 启动，默认端口2181，3.6之后占用8080端口作为AdminService服务，zoo.cfg 中添加 `admin.serverPort=12181` 可更改服务端口
-
-## Dubbo 代码用例
-
-该文的漏洞都是在官方给的 Demo 基础上复现 github 安全中心报告的问题，漏洞配套代码都上传至 [PPPVULNS](https://github.com/Whoopsunix/PPPVULNS/tree/master/components/Apache/DubboDemo) ，使用时注意切换 consumer、provider 的版本。
-
-官方 Demo：
-
-https://github.com/apache/dubbo-samples
-
-https://github.com/apache/dubbo-spring-boot-project/releases
 
 # 参考
 
