@@ -41,7 +41,7 @@ VMware ESXi 6.5系列 < ESXi650-202102101-SG
 
 ## 复现
 
-对  https://github.com/NS-Sp4ce/CVE-2021-21972/tree/main 小改 [脚本](/docs/RT/vcenter/CVE-2021-21972.py ':ignore')
+对  https://github.com/NS-Sp4ce/CVE-2021-21972/tree/main 小改 [脚本](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/CVE-2021-21972.py ':ignore')
 
 上传文件的绝对路径  /usr/lib/vmware-vsphere-ui/server/work/deployer/s/global/{REPLACE_RANDOM_ID_HERE}/0/h5ngc.war/resources/{shellname}
 
@@ -251,7 +251,7 @@ service-control --start --all
 
 ## CVE-2021-3156 提权写webshell
 
-目标为 photon os，直接写入root权限的webshell [wbs.py](/docs/RT/vcenter/wbs.py ':ignore') ，脚本依据 [exploit_userspec.py](https://github.com/worawit/CVE-2021-3156/blob/main/exploit_userspec.py) 修改得到
+目标为 photon os，直接写入root权限的webshell [wbs.py](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/wbs.py ':ignore') ，脚本依据 [exploit_userspec.py](https://github.com/worawit/CVE-2021-3156/blob/main/exploit_userspec.py) 修改得到
 
 上传脚本到服务器运行，python wbs.py
 
@@ -276,7 +276,7 @@ https://github.com/worawit/CVE-2021-3156/blob/main/exploit_defaults_mailer.py
 
 # 0x04 数据库操作
 
-没有 psql 执行环境的需要自己上传 [psql执行文件](/docs/RT/vcenter/psql.zip ':ignore')
+没有 psql 执行环境的需要自己上传 [psql执行文件](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/psql.zip ':ignore')
 
 ```
 应用自己的动态连接库文件
@@ -315,7 +315,7 @@ Windows：  C:\ProgramData\VMware\vCenterServer\cfg\vmware-vpx\ssl\symkey.dat
 Linux:  /etc/vmware-vpx/ssl/symkey.dat
 ```
 
-使用 [decrypt.py](/docs/RT/vcenter/be/decrypt.py ':ignore') 解密得到密码
+使用 [decrypt.py](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/be/decrypt.py ':ignore') 解密得到密码
 
 ```
 python3 decrypt.py symkey.dat password.enc password.txt
@@ -356,7 +356,7 @@ https://github.com/3gstudent/Homework-of-Python/
 
 data.mdb 过大，减少交互流量
 
-上传 [vCenter_ExtraCertFromMdb.py](/docs/RT/vcenter/be/vCenter_ExtraCertFromMdb.py ':ignore') 到服务器得到几个参数
+上传 [vCenter_ExtraCertFromMdb.py](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/be/vCenter_ExtraCertFromMdb.py ':ignore') 到服务器得到几个参数
 
 ```
 python vCenter_ExtraCertFromMdb.py /storage/db/vmware-vmdir/data.mdb
@@ -367,7 +367,7 @@ trusted_cert_1，保存为trusted_cert_1.txt
 trusted_cert_2，保存为trusted_cert_2.txt
 ```
 
-运行 [vCenter_GenerateLoginCookie.py](/docs/RT/vcenter/be/vCenter_GenerateLoginCookie.py ':ignore') 获取 Cookie
+运行 [vCenter_GenerateLoginCookie.py](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/be/vCenter_GenerateLoginCookie.py ':ignore') 获取 Cookie
 
 ```
 python3.8 vCenter_GenerateLoginCookie.py 192.168.100.3 192.168.100.3 vsphere.local idp_cert.txt trusted_cert_1.txt trusted_cert_2.txt
@@ -377,7 +377,7 @@ python3.8 vCenter_GenerateLoginCookie.py 192.168.100.3 192.168.100.3 vsphere.loc
 
 https://github.com/horizon3ai/vcenter_saml_login/blob/main/vcenter_saml_login.py
 
-[vcenter_saml_login.py](/docs/RT/vcenter/be/vcenter_saml_login.py ':ignore')
+[vcenter_saml_login.py](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/be/vcenter_saml_login.py ':ignore')
 
 ```
 python3.8 vcenter_saml_login.py -t 192.168.100.3 -p data.mdb
@@ -389,7 +389,7 @@ python3.8 vcenter_saml_login.py -t 192.168.100.3 -p data.mdb
 
 https://3gstudent.github.io/vSphere%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%975-LDAP
 
-[vCenterLDAP_Manage.py](/docs/RT/vcenter/be/vCenterLDAP_Manage.py ':ignore')
+[vCenterLDAP_Manage.py](https://github.com/Whoopsunix/whoopsunix.github.io/blob/main/docs/readTeam/vcenter/be/vCenterLDAP_Manage.py ':ignore')
 
 添加用户
 

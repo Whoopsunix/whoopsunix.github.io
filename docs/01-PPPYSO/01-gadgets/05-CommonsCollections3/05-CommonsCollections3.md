@@ -9,7 +9,7 @@ tags: [ysoserial, PPPYSO]
 
 ## 0x01 TemplatesImpl
 
-关于 `TemplatesImpl` 的分析在 [TemplatesImpl 改造](/docs/02-java/yspserial/payload/AbstractTranslet-remove/AbstractTranslet-remove.md) 中具体分析，这里就直接给出 CC链的写法。
+关于 `TemplatesImpl` 的分析在 [TemplatesImpl 改造](/docs/01-PPPYSO/02-advance/01-TemplatesImpl/01-TemplatesImpl.md) 中具体分析，这里就直接给出 CC链的写法。
 
 下述这段代码与 ysoserial 中并不相同，ysoserial 中是这样描述 CC3 的 `Variation on CommonsCollections1 that uses InstantiateTransformer instead of InvokerTransformer.`，为什么要使用 `InstantiateTransformer` 呢？因为攻防总是相伴相随的，ysoserial 公布后随之公布了相对应的防护工具 [SerialKiller](https://github.com/ikkisoft/SerialKiller) ，SerialKiller 是一个反序列化过滤器，使用黑白名单的方式来限制反序列化类，可以看到后续的很多组件在修复反序列化漏洞时都延续了这个思想（fastjson、struts2）。第一版的黑名单中限制了 `org.apache.commons.collections.functors.InvokerTransformer` ，因此我们要寻找新的 chain
 
