@@ -31,7 +31,7 @@ oos.flushBuffer();
 
 ## 0x03 pwned <=2.7.23
 
-而更进一步也不是什么秘密，既然是 Hessian 的黑名单，修改 `header[2]` 指定为 Java 反序列化的方式就可以实现利用，对于这种方式并没有安全验证。
+而更进一步也不是什么秘密，既然是 Hessian 的黑名单，修改 `header[2]` 指定为 Java 反序列化的方式就可以实现利用，在 2.x 版本中对于这种方式并没有安全验证。
 
 ```java
 public static void main(String[] args) throws Exception {
