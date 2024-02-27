@@ -12,7 +12,7 @@
 
 ![image-20240206112813014](attachments/image-20240206112813014.png)
 
-仍然可以接受来自用户的 Object 对象，因此可以构建如下 payload 实现利用。不过在 Dubbo 2.7.14 版本中修改了 `com.alibaba.com.caucho.hessian.io.ClassFactory` 这个类，通过黑名单的方式限制了 Hessian 反序列化，以至于该问题被似乎合理的隐藏掉了。
+仍然可以接受来自用户的 Object 对象，因此可以构建如下 payload 实现利用。不过在 Dubbo 2.7.14 版本中修改了 `com.alibaba.com.caucho.hessian.io.ClassFactory` 这个类，在 `readObject()` 时通过黑名单的方式限制了 Hessian 反序列化，以至于该问题被似乎合理的隐藏掉了。
 
 ```
 oos.writeUTF("0.0.0");
@@ -103,7 +103,7 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-这个问题在 3.x 以上版本被修复，默认开启了 `SERIALIZATION_SECURITY_CHECK_KEY` 检查，而在 `org.apache.dubbo.remoting.transport.CodecSupport#checkSerialization()` 这个方法中会检测序列化 id，固没法继续利用。
+这个问题在 3.x 以上版本被修复，默认开启了 `SERIALIZATION_SECURITY_CHECK_KEY` 检查，这个方法还有一个被忽略的作用 `org.apache.dubbo.remoting.transport.CodecSupport#checkSerialization()` 会检测序列化 id，因为我们构造的是 java 与默认的 hessian 不匹配所以没法利用。
 
 ![image-20240225105722921](attachments/image-20240225105722921.png)
 
