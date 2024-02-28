@@ -9,7 +9,7 @@ tags: [ysoserial, PPPYSO]
 
 ## 0x01 高版本不可行原因 - LinkedHashMap
 
-在上一篇分析对 cc1 进行总结时，提到在 jdk 8u71 版本时，在`AnnotationInvocationHandler` 类中引入  `LinkedHashMap` 导致无法利用，首先来分析一下原因。
+在上一篇分析对 CC1 进行总结时，提到在 jdk 8u71 版本时，在`AnnotationInvocationHandler` 类中引入  `LinkedHashMap` 导致无法利用，首先来分析一下原因。
 
 `AnnotationInvocationHandler` 类同时实现了 `InvocationHandler` 和 `Serializable` 接口，需要注意的是会首先调用 `readObject()` 方法，根据序列化数据重建对象，后续才会再进入代理对象的 `invoke()` 方法。
 
@@ -34,7 +34,7 @@ tags: [ysoserial, PPPYSO]
 在分析 `URLDNS` 时提到 HashMap 是实现了 Serializable 的，在反序列化 HashMap 时会计算 key 的 hash 即会调用 `hashCode()`  方法进行计算，那么同样可以用这种方式触发 `TiedMapEntry.hashCode()`。当然也会遇到与之前一致的问题调用 `HashMap.put()` 时提前触发，再复习一下之前的解决思路。
 
 1. URLDNS 反射调用 `putVal()` 写入 key
-2. cc1 LazyMap 先传一个空的 `ChainedTransformer` ，再反射将有威胁的 `Transformer[]` 写入
+2. CC1 LazyMap 先传一个空的 `ChainedTransformer` ，再反射将有威胁的 `Transformer[]` 写入
 
 实现如下：
 

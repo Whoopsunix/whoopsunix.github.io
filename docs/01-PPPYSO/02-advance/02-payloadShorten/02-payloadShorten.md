@@ -11,7 +11,7 @@ tags: [ysoserial, PPPYSO]
 
 前文将 AbstractTranslet 移除，这在一定程度上将 payload 长度已经大幅减少了生成 payload 长度
 
-以 cc3 为例，原始未改动 payload byte length: 3642
+以 CC3 为例，原始未改动 payload byte length: 3642
 
 
 

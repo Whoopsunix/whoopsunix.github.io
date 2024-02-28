@@ -92,9 +92,9 @@ ysoserial在构造 `Transformer[]` 时，结尾添加了一个 `new ConstantTran
 
 ![image-20230310145346447](attachments/image-20230310145346447.png)
 
-## 0x04 cc1总结
+## 0x04 CC1总结
 
-分析完 cc1 的两种利用方式，本质上的利用方式区别不大。而在分析cc1漏洞时，特意选用了小于 8u71 的jdk版本，是因为后续 [补丁](https://hg.openjdk.org/jdk8u/jdk8u/jdk/rev/f8a528d0379d) 中 AnnotationInvocationHandler 新增了一个 `LinkedHashMap` ，对 Map 的操作都基于这个新对象，因此我们传入的 Map 都无法直接执行 set、get 方法，后续分析中将继续改造调用链实现更高 JDK 版本的利用。
+分析完 CC1 的两种利用方式，本质上的利用方式区别不大。而在分析CC1漏洞时，特意选用了小于 8u71 的jdk版本，是因为后续 [补丁](https://hg.openjdk.org/jdk8u/jdk8u/jdk/rev/f8a528d0379d) 中 AnnotationInvocationHandler 新增了一个 `LinkedHashMap` ，对 Map 的操作都基于这个新对象，因此我们传入的 Map 都无法直接执行 set、get 方法，后续分析中将继续改造调用链实现更高 JDK 版本的利用。
 
 ![image-20230310153338255](attachments/image-20230310153338255.png)
 
