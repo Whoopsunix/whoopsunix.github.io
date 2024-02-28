@@ -9,7 +9,7 @@ tags: [ysoserial, PPPYSO]
 
 Ref: https://github.com/frohoff/ysoserial/pull/116/files
 
-# 0x01 kick-off TreeBag
+## 0x01 kick-off TreeBag
 
 在 CC2、CC4 中通过  `org.apache.commons.collections4.comparators.TransformingComparator#compare()` 实现对  `transform()` 方法的调用，那么介绍一下与 `PriorityQueue` 同在 rt.jar 下的另一个方法  `TreeMap`，`TreeMap` 是一个能比较元素大小的 Map 集合，会对传入的 key 进行了大小排序。可以使用元素的自然顺序，也可以使用集合中自定义的比较器来进行排序。
 

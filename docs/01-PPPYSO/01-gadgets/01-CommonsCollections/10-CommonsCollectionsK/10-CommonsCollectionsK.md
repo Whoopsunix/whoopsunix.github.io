@@ -7,7 +7,7 @@ tags: [ysoserial, PPPYSO]
 
 # CommonsCollectionsK 系列
 
-# 0x01 CommonsCollectionsK1、K2、K4
+## 0x01 CommonsCollectionsK1、K2、K4
 
 CC 的 Gadget 分析到现在，其实做的事情简单来说就是对 kick-off、chain、sink 的再组合，不断的操控 compare() 方法，见缝插针去构造我们期望的反射方法，比如 ChainedTransformer 的命令执行可以换成 TemplatesImpl 来加载字节码。
 

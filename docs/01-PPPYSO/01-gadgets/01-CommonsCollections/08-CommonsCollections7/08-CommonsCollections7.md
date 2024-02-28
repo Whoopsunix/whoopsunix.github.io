@@ -7,7 +7,7 @@ tags: [ysoserial, PPPYSO]
 
 # CommonsCollections7
 
-# 0x01 Hashtable
+## 0x01 Hashtable
 
 CC7 是 CC6 的延伸，使用了另一个 kick-off `java.util.Hashtable` 去调用 `LazyMap`。Hashtable 也是 JDK 内置的集合，与 HashMap 的操作几乎一致，主要的区别在于 HashTable 为了实现多线程安全，在几乎所有的方法上都加上了 synchronized 锁，而加锁的结果就是 `HashTable` 操作的效率十分低下，因此是一个淘汰方法。
 
@@ -59,7 +59,7 @@ public Hashtable getObject(final String command) throws Exception {
 }
 ```
 
-# 0x02 ysoserial 怎么做的
+## 0x02 ysoserial 怎么做的
 
 再来看看 ysoserial 的实现方式，先跟进一下调用链。从 `readObject()` 进入 `Hashtable#reconstitutionPut()` 后，这时候 `tab` 为 null ，并不会进入循环。
 
@@ -79,7 +79,7 @@ public Hashtable getObject(final String command) throws Exception {
 
 ![image-20230407000935377](attachments/image-20230407000935377.png)
 
-# 0x03 LazyMap 为什么 put yy 和 zZ ？
+## 0x03 LazyMap 为什么 put yy 和 zZ ？
 
 前面我们提到会二次进入 `Hashtable#reconstitutionPut()` ，因为第二次 `tab[index]` 元素存在所以能调用 `equals()` ，index 值通过计算字符的hash得到，那么为什么不能 put 两个相同的值？
 
@@ -93,7 +93,7 @@ public Hashtable getObject(final String command) throws Exception {
 
 ![image-20230407103337102](attachments/image-20230407103337102.png)
 
-# 0x04 lazyMap2.remove("yy") 的原因？
+## 0x04 lazyMap2.remove("yy") 的原因？
 
 把 `remove()` 注释掉后再调试，发现在 `AbstractMap#equals()` 中 `m.size() != size()` 返回 false ，所以无法继续下面的调用。
 
@@ -115,7 +115,7 @@ public Hashtable getObject(final String command) throws Exception {
 
 ![image-20230407112953974](attachments/image-20230407112953974.png)
 
-# 0x05 Gadget Chain
+## 0x05 Gadget Chain
 
 ```
 Hashtable.readObject()
