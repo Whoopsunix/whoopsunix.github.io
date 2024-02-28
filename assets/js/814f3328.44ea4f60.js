@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwhoopsunix_wiki=self.webpackChunkwhoopsunix_wiki||[]).push([[2535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"About Me","permalink":"/blog/index","unlisted":false}]}')}}]);

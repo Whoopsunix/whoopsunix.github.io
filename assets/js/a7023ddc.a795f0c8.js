@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwhoopsunix_wiki=self.webpackChunkwhoopsunix_wiki||[]).push([[1713],{3457:a=>{a.exports=JSON.parse('[{"label":"Java","permalink":"/blog/tags/java","count":1}]')}}]);
