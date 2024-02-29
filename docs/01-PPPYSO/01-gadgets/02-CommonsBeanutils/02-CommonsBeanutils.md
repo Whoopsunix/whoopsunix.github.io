@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-tags: [ysoserial, PPPYSO]
+tags: [ysoserial, PPPYSO, CommonsBeanutils]
 #slug: About Me
 #title: About Me
 ---
