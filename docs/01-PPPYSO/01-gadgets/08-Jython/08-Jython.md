@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
 Jython3 用的是 `org.python.core.BuiltinFunctions` 这个类来触发
 
-# 0x04 Jython4
+## 0x04 Jython4
 
 Jython4 这条链用的 `com.ziclix.python.sql.connect.Lookup#__call__()` 来触发，这个利用比较简单，将参数 1 设置为远程调用地址就行。
 
