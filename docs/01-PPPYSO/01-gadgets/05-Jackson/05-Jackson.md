@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO, Jackson]
 #title: About Me
 ---
 
-# Jackson 原生反序列化
+# Jackson
 
 ## 0x01 调用链构建
 

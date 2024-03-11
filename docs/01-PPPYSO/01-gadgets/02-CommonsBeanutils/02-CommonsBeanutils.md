@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO, CommonsBeanutils]
 #title: About Me
 ---
 
-# CommonsBeanutils 系列
+# CommonsBeanutils
 
 在之前分析 cc4 的时候，用到了 `TransformingComparator`、`ChainedTransformer` 等类来触发 `TemplatesImpl`。commons-beanutils 是 Apache 提供的一个用于操作 JAVA bean 的工具包，里面提供了各种各样的工具类，让我们可以很方便的对 bean 对象的属性进行各种操作，由此引出了 CB 系列的反序列化链。
 

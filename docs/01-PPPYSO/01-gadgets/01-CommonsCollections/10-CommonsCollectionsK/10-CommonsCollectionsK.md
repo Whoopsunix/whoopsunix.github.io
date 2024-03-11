@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO]
 #title: About Me
 ---
 
-# CommonsCollectionsK 系列
+# CommonsCollectionsK
 
 ## 0x01 CommonsCollectionsK1、K2、K4
 

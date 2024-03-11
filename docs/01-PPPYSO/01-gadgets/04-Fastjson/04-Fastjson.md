@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO, Fastjson]
 #title: About Me
 ---
 
-# fastjson 原生反序列化
+# Fastjson
 
 ## 0x00 fastjon 触发 getter
 

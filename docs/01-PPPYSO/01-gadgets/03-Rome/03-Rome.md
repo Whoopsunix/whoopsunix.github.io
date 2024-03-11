@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO, Rome]
 #title: About Me
 ---
 
-# ROME 系列
+# ROME
 
 ## 0x00 相关类介绍
 

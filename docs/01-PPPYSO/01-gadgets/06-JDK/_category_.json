@@ -1,8 +1,8 @@
 {
-  "label": "JDK序列化",
+  "label": "JDK",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "JDK序列化"
+    "description": "JDK"
   }
 }
