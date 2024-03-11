@@ -40,6 +40,10 @@ tags: [ysoserial, PPPYSO, JDK, Serialization]
 
 ![image-20240310114822408](attachments/image-20240310114822408.png)
 
+加密算法比较简单，稍微改动一下三字节的也同样可以写出来。
+
+![image-20240311100158770](attachments/image-20240311100158770.png)
+
 ## 0x03 剩下的的信息
 
 第二步思路已经可以将序列化时本身的信息处理干净了，但是用 CC2 生成的 payload 还是有明显特征，这部分信息通过 `TC_ARRAY` 来标识，存储的是我们生成的恶意 JavaClass 字节码，这部分的混淆就与很多例子了，这里不过多展开。
