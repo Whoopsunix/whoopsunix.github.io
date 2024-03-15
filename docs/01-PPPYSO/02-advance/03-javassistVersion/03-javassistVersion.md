@@ -11,7 +11,7 @@ tags: [ysoserial, PPPYSO, JavaClass]
 
 在序列化 payload 时如果编码为 base64 ，那么对于 `rO0AB` 开头的字符就一定不会陌生。
 
-我们用 [zkar](https://github.com/phith0n/zkar) 对一个序列化数据进行分析，可以看到是以 `AC ED 00 05` 开头，base64 编码后就为 `rO0ABxxx` 开头的字符，所以在检测序列化数据时，这个也通常作为很多设备的检测标准之一，那种检测到 `rO0AB` 就直接拦截的设备就真的非常不讲武德。具体序列化流的解读可以跳转 JDK8u20 的分析。
+我们用 [zkar](https://github.com/phith0n/zkar) 对一个序列化数据进行分析，可以看到是以 `AC ED 00 05` 开头，base64 编码后就为 `rO0ABxxx` 开头的字符，所以在检测序列化数据时，这个也通常作为很多设备的检测标准之一，那种检测到 `rO0AB` 就直接拦截的设备就真的非常不讲武德。具体序列化流的解读可以跳转 [JDK8u20](/docs/01-PPPYSO/01-gadgets/06-JDK/JDK8u20/JDK8u20.md) 的分析。
 
 ![image-20240119114046795](attachments/image-20240119114046795.png)
 

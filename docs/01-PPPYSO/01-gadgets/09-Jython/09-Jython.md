@@ -18,7 +18,9 @@ public static void main(String[] args) {
 }
 ```
 
-## 0x01 PyFunction
+## Jython1
+
+### 0x01 PyFunction
 
 `org.python.core.PyFunction` 是 Jython 中的一个类，用于表示 Python 中的函数对象。`PyFunction` 类提供了访问和操作 Python 函数的方法和属性。
 
@@ -34,7 +36,7 @@ public static void main(String[] args) {
 
 ![image-20240229170259682](attachments/image-20240229170259682.png)
 
-## 0x02 PyCode
+### 0x02 PyCode
 
 `org.python.core.PyCode` 用于表示 Python 中的代码对象，包括函数、模块、类等的字节码表示。我们可以看到 `org.python.core.PyFunction#__call__()` 方法最终会调用 `org.python.core.PyCode#call()` 方法来执行 Python 代码。
 
@@ -71,7 +73,11 @@ if __name__ == '__main__':
     print(dis.dis(execEvil.__code__))
 ```
 
-## 0x03 PyMethod Jython3
+Jython2 和 Jython1 一样，只不过换成 os.system() 来执行，避免写文件。
+
+## Jython3
+
+### 0x01 PyMethod 
 
 `org.python.core.PyMethod` 这个类同样实现了动态代理，其 `invoke()` 方法调用了 `__call__()` 方法，构造的时候满足 `PyMethod` 的判断即可：
 
@@ -85,7 +91,7 @@ if __name__ == '__main__':
 
 Jython3 用的是 `org.python.core.BuiltinFunctions` 这个类来触发
 
-## 0x04 Jython4
+## Jython4
 
 Jython4 这条链用的 `com.ziclix.python.sql.connect.Lookup#__call__()` 来触发，这个利用比较简单，将参数 1 设置为远程调用地址就行。
 

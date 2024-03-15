@@ -7,9 +7,9 @@ tags: [ysoserial, PPPYSO, Clojure]
 
 # Clojure
 
-## 0x01 Clojure1
+## Clojure1
 
-### clojure.java.shell$sh
+### 0x01 clojure.java.shell$sh
 
 Clojure 是 LISP 在 Java 的实现，是直接运行在 JVM 上的，可以直接调用 Java 的类和方法，以下例子中使用了 Clojure 提供的 Java API，通过 `clojure.java.api.Clojure` 类来加载 Clojure 的核心命名空间，并使用 `IFunction` 接口来获取 Clojure 中的函数执行命令。
 
@@ -39,7 +39,7 @@ public class ClojureTest {
 
 ![image-20240306101018439](attachments/image-20240306101018439.png)
 
-### clojure.main$eval_opt
+### 0x02 clojure.main$eval_opt
 
 上文的例子中我们加载了 `clojure.core` 核心空间来执行命令，还有其他写法么，是有的。直接用到 `clojure.main` 这个类来调用。
 
@@ -56,7 +56,7 @@ public class ClojureTest {
 
 ![image-20240306100503956](attachments/image-20240306100503956.png)
 
-### AbstractTableModel$ff19274a
+### 0x03 AbstractTableModel$ff19274a
 
 gadget 形成用到的是 `clojure.inspector.proxy$javax.swing.table.AbstractTableModel$ff19274a` 这个类，这个类是一个匿名类实例，通常用于 GUI 相关操作，是 JackOfMostTrades 用 [gadgetinspector](https://github.com/JackOfMostTrades/gadgetinspector) 挖掘得到的链子，具体可以看 [blackhat Automated-Discovery-of-Deserialization-Gadget-Chains](https://i.blackhat.com/us-18/Thu-August-9/us-18-Haken-Automated-Discovery-of-Deserialization-Gadget-Chains.pdf) 这个议题，这里就直接分析了。
 
@@ -68,13 +68,13 @@ gadget 形成用到的是 `clojure.inspector.proxy$javax.swing.table.AbstractTab
 
 ![image-20240306103207696](attachments/image-20240306103207696.png)
 
-### clojure.core$comp$fn__4727
+### 0x04 clojure.core$comp$fn__4727
 
 `clojure.core$comp$fn__4727#invoke()` 方法中，会将 `this.g` 调用 `invoke()` 后交给 `this.f` 再次调用 `invoke()` 。
 
 ![image-20240306105217683](attachments/image-20240306105217683.png)
 
-### core$constantly$fn__4614
+### 0x05 core$constantly$fn__4614
 
 根据之前的分析 `this.f` 可以定义为 `clojure.main$eval_opt` 对象，`this.g` 应该为需要执行的命令。 `core$constantly$fn__4614` 这个类，在调用其 `doInvoke()` 方法时，会直接返回存储的对象。
 
@@ -82,9 +82,9 @@ gadget 形成用到的是 `clojure.inspector.proxy$javax.swing.table.AbstractTab
 
 Kick-off 的触发选用 `hashCode()` 于是选择 HashMap
 
-## 0x02 Clojure2
+## Clojure2
 
-### Iterate
+### 0x01 Iterate
 
 在 `clojure.lang.Iterate.first()` 方法中会调用 `f.invoke()` ，这个 `f` 是一个 `clojure.lang.IFn` 接口的实现类，我们前面分析的 `core$comp` 就实现了这个接口，所以只需要找触发 `first()` 的方法。
 

@@ -9,9 +9,9 @@ tags: [ysoserial, PPPYSO, Hibernate]
 
 ORM 框架
 
-## 0x01 Hibernate1
+## Hibernate1
 
-### BasicPropertyAccessor
+### 0x01 BasicPropertyAccessor
 
 `org.hibernate.property.BasicPropertyAccessor` 类提供通过 setter 和 getter 操作属性值的能力，这个属性值可以是 nopublic 的，在 `org.hibernate.property.BasicPropertyAccessor.BasicGetter.get()` 方法中反射调用。
 
@@ -21,7 +21,7 @@ ORM 框架
 
 ![image-20240313103048355](attachments/image-20240313103048355.png)
 
-### AbstractComponentTuplizer
+### 0x02 AbstractComponentTuplizer
 
 在 `org.hibernate.tuple.component.AbstractComponentTuplizer.getPropertyValue()` 方法中遍历 `Getter[]` 时调用了 `BasicGetter.get()` 。
 
@@ -29,7 +29,7 @@ ORM 框架
 
 `AbstractComponentTuplizer` 本身是一个抽象类，gadget 使用的其中一个继承类 `org.hibernate.tuple.component.PojoComponentTuplizer` 
 
-### ComponentType
+### 0x03 ComponentType
 
 通过 `org.hibernate.type.ComponentType.getPropertyValue()` 方法调用 `getPropertyValue()` ，又被自身的 `getHashCode()` 方法调用。
 
@@ -39,7 +39,7 @@ ORM 框架
 
 `PojoComponentTuplizer` 和 `ComponentType` 这两个类从命名来看都有 `Component` （组件），这个是 Hibernate 的一个概念，简单来说用来表示对象内的一部分或者一组相关属性，可以作为对象的一部分持久化，也可以嵌入其他实体。他们共同完成持久化行为，所以存在调用也更好理解。
 
-### TypedValue
+### 0x04 TypedValue
 
 继续寻找调用了 `ComponentType.getHashCode()` 的方法，定位到 `org.hibernate.engine.spi.TypedValue` 这个类。
 
@@ -57,6 +57,6 @@ ORM 框架
 
 之后用 HashMap 这个 Kick-off 去触发就是这条调用链了。
 
-## 0x02 Hibernate2
+## Hibernate2
 
 Sink 改用 `com.sun.rowset.JdbcRowSetImpl.getDatabaseMetaData()` ，其他没动。

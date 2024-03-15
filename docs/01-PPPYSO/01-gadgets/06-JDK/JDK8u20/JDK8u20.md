@@ -174,6 +174,8 @@ D4. normalFunc()，先异常、后正常：
 
 ### Java序列化流语法
 
+通过一个 demo 来分析一下序列化流的语法
+
 ```java
 public class Grammer implements Serializable {
     public String name;

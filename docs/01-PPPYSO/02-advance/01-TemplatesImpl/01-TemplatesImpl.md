@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO]
 #title: About Me
 ---
 
-# TemplatesImpl 全解全析
+# TemplatesImpl 分析
 
 ## 0x01 TemplatesImpl 最初形态
 
