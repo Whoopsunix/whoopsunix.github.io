@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwhoopsunix_wiki=self.webpackChunkwhoopsunix_wiki||[]).push([[3519],{59462:i=>{i.exports=JSON.parse('{"label":"Spring","permalink":"/docs/tags/spring","allTagsPath":"/docs/tags","count":1,"items":[{"id":"PPPYSO/gadgets/Spring/Spring","title":"Spring","description":"Spring1","permalink":"/docs/PPPYSO/gadgets/Spring/"}],"unlisted":false}')}}]);
