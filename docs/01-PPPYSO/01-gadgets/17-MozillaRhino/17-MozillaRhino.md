@@ -103,10 +103,16 @@ Mozilla Rhino JavaScript 是一个开源的 JavaScript 引擎，由 Mozilla Foun
 
 ## MozillaRhino3
 
+### 0x01 NativeScript
 
+这条链可以跳转 [国外的分析](https://testbnull.medium.com/return-of-the-rhino-analysis-of-mozillarhino-gadgetchain-also-the-writeup-of-hitb-linkextractor-a2074b4ae624) ，有点像前面两条链的结合，与 MozillaRhino1 很类似，区别在 `org.mozilla.javascript.ScriptableObject.getImpl()` 方法，MozillaRhino1 用的 `NativeJavaMethod` 来触发，MozillaRhino3 用了一个新的类 `org.mozilla.javascript.NativeScript`
 
+![image-20240315175435982](attachments/image-20240315175435982.png)
 
+![image-20240315175547966](attachments/image-20240315175547966.png)
 
+`org.mozilla.javascript.NativeScript.call()` 方法允许动态执行 Rhino JavaScript ，类似 Nashorn `ScriptEngineManager` 的 `eval()` 。
 
+### 0x02 JavaAdapter
 
-MozillaRhino3 https://t.zsxq.com/05UJ2J6Am
+还是一样向上寻找调用了 `org.mozilla.javascript.ScriptableObject.getProperty()` 的方法，这条链用到了和 MozillaRhino2 一样的 `JavaAdapter` 这个类触发类似，然后按实际利用类的要求去构造就出来了，刚好原文是一步步截图的，就不再赘述。
