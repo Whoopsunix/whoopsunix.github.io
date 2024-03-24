@@ -9,3 +9,5 @@
 > Openwall  https://www.openwall.com/lists/oss-security/
 >
 > Jetbrain  https://www.jetbrains.com/privacy-security/issues-fixed/
+> 
+> confluence https://confluence.atlassian.com/security/atlassian-security-229839985.html
