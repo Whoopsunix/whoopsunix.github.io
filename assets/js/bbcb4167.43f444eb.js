@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwhoopsunix_wiki=self.webpackChunkwhoopsunix_wiki||[]).push([[1339],{54718:s=>{s.exports=JSON.parse('{"label":"DevOps","permalink":"/docs/tags/dev-ops","allTagsPath":"/docs/tags","count":1,"items":[{"id":"DevOpsAttack/index","title":"DevOps Attack","description":"Continuous delivery tool","permalink":"/docs/DevOpsAttack/"}],"unlisted":false}')}}]);

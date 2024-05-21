@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://whoopsunix.com/blog</id>
+    <title>Whoopsunix Blog</title>
+    <updated>2024-05-21T09:36:42.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://whoopsunix.com/blog"/>
+    <subtitle>Whoopsunix Blog</subtitle>
+    <icon>https://whoopsunix.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[👋 This is Whoopsunix]]></title>
+        <id>https://whoopsunix.com/blog/index</id>
+        <link href="https://whoopsunix.com/blog/index"/>
+        <updated>2024-05-21T09:36:42.000Z</updated>
+        <summary type="html"><![CDATA[🔥 I'm a DevOps ATT&DEF, focusing on security issues related to DevOps, most about Java, and transforming the research into security products such as RASP, IAST, DAST, SAST, SCA, SPM, etc. WIKI link]]></summary>
+        <content type="html"><![CDATA[<p>🔥 I'm a DevOps ATT&amp;DEF, focusing on security issues related to DevOps, most about Java, and transforming the research into security products such as RASP, IAST, DAST, SAST, SCA, SPM, etc. <a href="https://whoopsunix.com/" target="_blank" rel="noopener noreferrer">WIKI link</a></p>]]></content>
+        <author>
+            <name>Whoopsunix</name>
+            <uri>https://github.com/Whoopsunix</uri>
+        </author>
+        <category label="Java" term="Java"/>
+    </entry>
+</feed>

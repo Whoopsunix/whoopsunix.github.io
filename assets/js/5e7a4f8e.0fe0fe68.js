@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwhoopsunix_wiki=self.webpackChunkwhoopsunix_wiki||[]).push([[7950],{69350:e=>{e.exports=JSON.parse('{"label":"Clojure","permalink":"/docs/tags/clojure","allTagsPath":"/docs/tags","count":1,"items":[{"id":"PPPYSO/gadgets/Clojure/Clojure","title":"Clojure","description":"Clojure1","permalink":"/docs/PPPYSO/gadgets/Clojure/"}],"unlisted":false}')}}]);
