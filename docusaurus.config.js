@@ -110,6 +110,10 @@ const config = {
                 darkTheme: prismThemes.dracula,
                 additionalLanguages: ['java', 'json', 'http', 'python', 'xml-doc', 'go', 'sql', 'php', 'csharp', 'bash']
             },
+            tableOfContents: {
+                minHeadingLevel: 2,
+                maxHeadingLevel: 5,
+            }
         }),
     ssrTemplate: `<!DOCTYPE html>
 <html <%~ it.htmlAttributes %>>

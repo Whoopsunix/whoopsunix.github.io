@@ -5,7 +5,7 @@ tags: [ysoserial, PPPYSO, Ruoyi]
 
 # 若依定时任务BE Rce
 
-既然被公开了，就直接公开叭
+既然被公开了，就发一下之前挖的时候记的笔记叭
 
 ## 0x00 poc 生成
 

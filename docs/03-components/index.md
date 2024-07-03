@@ -16,3 +16,5 @@ tags: [CVE]
 > Jetbrain  https://www.jetbrains.com/privacy-security/issues-fixed/
 > 
 > confluence https://confluence.atlassian.com/security/atlassian-security-229839985.html
+> 
+> 事件  https://threats.wiz.io/targeted-technologies
