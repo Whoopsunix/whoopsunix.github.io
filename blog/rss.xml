@@ -4,7 +4,7 @@
         <title>Whoopsunix Blog</title>
         <link>https://whoopsunix.com/blog</link>
         <description>Whoopsunix Blog</description>
-        <lastBuildDate>Tue, 21 May 2024 09:36:42 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 03 Jul 2024 08:30:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[👋 This is Whoopsunix]]></title>
             <link>https://whoopsunix.com/blog/index</link>
             <guid>https://whoopsunix.com/blog/index</guid>
-            <pubDate>Tue, 21 May 2024 09:36:42 GMT</pubDate>
+            <pubDate>Wed, 03 Jul 2024 08:30:19 GMT</pubDate>
             <description><![CDATA[🔥 I'm a DevOps ATT&DEF, focusing on security issues related to DevOps, most about Java, and transforming the research into security products such as RASP, IAST, DAST, SAST, SCA, SPM, etc. WIKI link]]></description>
             <content:encoded><![CDATA[<p>🔥 I'm a DevOps ATT&amp;DEF, focusing on security issues related to DevOps, most about Java, and transforming the research into security products such as RASP, IAST, DAST, SAST, SCA, SPM, etc. <a href="https://whoopsunix.com/" target="_blank" rel="noopener noreferrer">WIKI link</a></p>]]></content:encoded>
             <category>Java</category>
