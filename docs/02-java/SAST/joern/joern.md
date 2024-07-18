@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-tags: [CodeAnalysis, joern]
+tags: [SAST, joern]
 ---
 
-# joern 入门篇 (一)
+# SAST 之路 - joern 入门篇 (一)
 
 ## 关于 joern
 
@@ -14,6 +14,25 @@ tags: [CodeAnalysis, joern]
 > https://blog.shiftleft.io/semantic-code-property-graphs-and-security-profiles-b3b5933517c1?gi=e675bb96e6b1
 >
 > https://github.com/joernio/workshops/blob/master/2021-RSA/RSA-LAB2-R08.pdf
+
+为什么会选用 joern 来开始？一个是这个工具相对较成熟，可以看到每个语言的识别能力都是基于相对资料多的框架去实现的，恰好其中的 soot、JavaParser、ANTLR 等又很有兴趣，深度学习后对于二次开发又很大的帮助，所以这也是为什么选择大而全的 joern 来开启 SAST 之路
+
+| Name         | Built with   | Maturity   |
+| ------------ | ------------ | ---------- |
+| C/C++        | Eclipse CDT  | Very High  |
+| Java         | JavaParser   | Very High  |
+| JavaScript   | GraalVM      | High       |
+| Python       | JavaCC       | High       |
+| x86/x64      | Ghidra       | High       |
+| JVM Bytecode | Soot         | Medium     |
+| Kotlin       | IntelliJ PSI | Medium     |
+| PHP          | PHP-Parser   | Medium     |
+| Go           | go.parser    | Medium     |
+| Ruby         | ANTLR        | Medium-Low |
+| Swift        | SwiftSyntax  | Medium     |
+| C#           | Roslyn       | Medium-Low |
+
+
 
 ## CPG
 

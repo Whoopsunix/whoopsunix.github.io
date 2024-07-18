@@ -192,7 +192,7 @@ clazz.newInstance();
 
 ![image-20240503144046772](attachments/image-20240503144046772.png)
 
-顺着前面的思路可以用 `MethodHandles.Lookup` 来加载，不过有个包名一致的问题，其实也有一个 `newInstanceNoCheck()` 的利用这里介绍另一种更加简单的用法，利用 Unsafe
+顺着前面的思路可以用 `MethodHandles.Lookup` 来加载，不过有个包名一致的问题，其实也有一个 `newInstanceNoCheck()` 的利用
 
 ```java
         Method privateLookupInMethod = MethodHandles.class.getMethod("privateLookupIn", Class.class, MethodHandles.Lookup.class);
@@ -203,7 +203,7 @@ clazz.newInstance();
         c.getDeclaredConstructor().newInstance();
 ```
 
-在 [GodzillaMemoryShellProject](https://github.com/BeichenDream/GodzillaMemoryShellProject/blob/main/TomcatMemoryShell/src/AesBase64TomcatListenerShell.java) 这个项目中也用到了 Unsafe 来操作字段，顺着这次研究也有了新的思路。跟进 `java.lang.reflect.Method#setAccessible()` 方法，最终定位到 `java.lang.reflect.AccessibleObject#checkCanSetAccessible()` 判断了 `Module` 是否一致。
+这里介绍另一种更加简单的用法，利用 Unsafe，在 [GodzillaMemoryShellProject](https://github.com/BeichenDream/GodzillaMemoryShellProject/blob/main/TomcatMemoryShell/src/AesBase64TomcatListenerShell.java) 这个项目中也用到了 Unsafe 来操作字段，顺着这次研究也有了新的思路。跟进 `java.lang.reflect.Method#setAccessible()` 方法，最终定位到 `java.lang.reflect.AccessibleObject#checkCanSetAccessible()` 判断了 `Module` 是否一致。
 
 ![image-20240503145715622](attachments/image-20240503145715622.png)
 
