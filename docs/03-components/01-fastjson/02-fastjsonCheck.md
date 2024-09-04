@@ -130,23 +130,23 @@ jackson 的方式（添加字符破坏的方式），在参数处理时就已经
 
 对于某正常登陆接口
 
-![](attachments/Pasted image 20221114152732.png)
+![](attachments/Pasted%20image%2020221114152732.png)
 
 添加多余key不报错，排除jackson
 
-![](attachments/Pasted image 20221114152841.png)
+![](attachments/Pasted%20image%2020221114152841.png)
 
 寻找另外一个整数值的接口改成浮点数，触发报错，但报错信息与gson预想不一致，还需要判断
 
-![](attachments/Pasted image 20221114153516.png)
+![](attachments/Pasted%20image%2020221114153516.png)
 
 拼接特有解析 `#\n{a:1}\n`，在排除gson的同时，通过报错信息得到组件为fastjson 1.2.83
 
-![](attachments/Pasted image 20221114153913.png)
+![](attachments/Pasted%20image%2020221114153913.png)
 
 ### jackson
 
-![](attachments/Pasted image 20221118102601.png)
+![](attachments/Pasted%20image%2020221118102601.png)
 
 ## 0x02 DNSLOG
 
@@ -195,7 +195,7 @@ jackson 的方式（添加字符破坏的方式），在参数处理时就已经
   "@type": "java.lang.AutoCloseable"  
 ```
 
-![](attachments/Pasted image 20221118153949.png)
+![](attachments/Pasted%20image%2020221118153949.png)
 
 ### 精确版本号2
 
@@ -209,7 +209,7 @@ jackson 的方式（添加字符破坏的方式），在参数处理时就已经
 ]  
 ```
 
-![](attachments/Pasted image 20221124153332.png)
+![](attachments/Pasted%20image%2020221124153332.png)
 
 ### dnslog
 
@@ -310,7 +310,7 @@ payload向下兼容版本，
 }  
 ```
 
-![](attachments/Pasted image 20221118171808.png)
+![](attachments/Pasted%20image%2020221118171808.png)
 
 ### Class回显
 

@@ -12,7 +12,7 @@ soure 点选用 HashMap，具体原理可以参考 [hashMap原理](https://cloud
 
 而在 HashMap 的 `readObject()` 中调用 `putVal()` 计算 key 的 hash，所以用来触发。
 
-![](attachments/Pasted image 20230303143409.png)
+![](attachments/Pasted%20image%2020230303143409.png)
 
 在序列化时会调用 `put()` 方法，这时候会触发 `hashCode()` 方法，hashCode 属性值会被设为 -1，经过 `java.net.URL.hashCode()` 中判断，不会触发后续流程，所以需要反射修改 hashCode 值。
 
