@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://whoopsunix.com/blog</id>
     <title>Whoopsunix Blog</title>
-    <updated>2024-09-04T03:33:29.000Z</updated>
+    <updated>2024-11-20T14:56:36.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://whoopsunix.com/blog"/>
     <subtitle>Whoopsunix Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[👋 This is Whoopsunix]]></title>
         <id>https://whoopsunix.com/blog/index</id>
         <link href="https://whoopsunix.com/blog/index"/>
-        <updated>2024-09-04T03:33:29.000Z</updated>
+        <updated>2024-11-20T14:56:36.000Z</updated>
         <summary type="html"><![CDATA[🔥 I'm a DevOps ATT&DEF, Open-Sourcerer, focusing on security issues related to DevOps, and transforming the research into security products such as SCA, RASP, IAST, SAST, DAST, SPM, etc.]]></summary>
         <content type="html"><![CDATA[<p>🔥 I'm a DevOps ATT&amp;DEF, Open-Sourcerer, focusing on security issues related to DevOps, and transforming the research into security products such as SCA, RASP, IAST, SAST, DAST, SPM, etc.</p>]]></content>
         <author>
