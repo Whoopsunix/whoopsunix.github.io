@@ -13,7 +13,7 @@ tags: [ysoserial, PPPYSO]
 
 ![image-20230307232014578](attachments/image-20230307232014578.png)
 
-还是上一篇文章介绍的 `sun.reflect.annotation.AnnotationInvocationHandler` 类的 `Invoke()` 方法中调用了，通过 `memberValues` 对象调用了 `get()` 方法。
+在上一篇文章中介绍过的 `memberValues` 对象在 `sun.reflect.annotation.AnnotationInvocationHandler.invoke()` 方法中被调用。
 
 ![image-20230327233519552](attachments/image-20230327233519552.png)
 

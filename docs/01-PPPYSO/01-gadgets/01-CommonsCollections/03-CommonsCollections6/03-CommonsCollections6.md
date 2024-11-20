@@ -7,17 +7,27 @@ tags: [ysoserial, PPPYSO]
 
 # CommonsCollections6
 
-## 0x01 高版本不可行原因 - LinkedHashMap
+## 0x01 修正 高版本不可行原因 - LinkedHashMap 
 
-在上一篇分析对 CC1 进行总结时，提到在 jdk 8u71 版本时，在`AnnotationInvocationHandler` 类中引入  `LinkedHashMap` 导致无法利用，首先来分析一下原因。
+前面关于 LazyMap 利用时，提到这个利用方式是通过调用 `readObject()` 方法根据序列化数据重建对象后，进入代理对象的 `invoke()` 方法实现利用。
 
-`AnnotationInvocationHandler` 类同时实现了 `InvocationHandler` 和 `Serializable` 接口，需要注意的是会首先调用 `readObject()` 方法，根据序列化数据重建对象，后续才会再进入代理对象的 `invoke()` 方法。
+在 jdk 8u71 之前的版本，`readObject()` 进入后，通过 `s.defaultReadObject();` 将 `memberValues` 还原为 LazyMap 形成调用，这里很好理解。
 
-而在 `readObject()` 方法中，将 memberValues 定义为 `LinkedHashMap`，而不是前面提到的 `LazyMap` 或 `TransformedMap`，自然无法形成调用链。
+为了更好的理解，我们将调用链中的 `AnnotationInvocationHandler` 分成 `AH@1` 和 `AH@2` 两个来理解
+
+> `AH@1` 用于装饰 LazyMap，是通过传入构造方法创建的
+>
+> `AH@2` 再次使用，对 `AH@1` 进行代理，形成嵌套结构
+
+知道这个后，那么初始进入 `readObject()` 时，是不是就该执行 `AH@1`? 如果 `AH@1` 这个过程就改变了 `memberValues` 值是不是没办法继续进入 `AH@2` 的流程？而 jdk 8u71 中执行完 `readObject()` 后会将 `LinkedHashMap` 赋值到 `memberValues` 中，逻辑闭环也就走不通了。
 
 ![image-20231221212024044](attachments/image-20231221212024044.png)
 
-还是以 `LazyMap` 为例，既然通过 `entrySet()` 的方式走不通，那就再找找其他调用了 `LazyMap.get()` 的方法。
+在实际调用的时候，在 `readObject()` 方法打断点，可以看到确实进入了两次 `readObject()` 方法，并且在第一次进入时的 469 行修改 mv 为 `memverValue` 即 lazyMap 是可以利用成功的。那为什么会反序列化两次呢？
+
+因为 JVM 在处理多重封装的时候，会先将每个代理对象分别调用其关联的 `readObject()` 方法恢复状态。（动态代理机制需要代理类在反序列化时能够确保其代理接口和内部数据结构被完整地重建）
+
+还是以 `LazyMap` 为例，既然通过 `entrySet()` 的方式走不通，那就再找找其他调用 `LazyMap.get()` 的方法。
 
 ## 0x02 TiedMapEntry
 
